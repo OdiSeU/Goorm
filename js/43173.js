@@ -7,12 +7,12 @@ const rl = readline.createInterface({
 
 rl.on("line", function(line) {
 	let [a, b] = line.split(' ');
-	solution(a, b);
+	console.log(solution(a, b));
 	rl.close();
 }).on("close", function() {
 	process.exit();
 });
 
 function solution(a, b) {
-	console.log(`${a>>b}\n${a<<b}`);
+	return `${a>>b}\n${a<<b}`;
 }
