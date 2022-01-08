@@ -1,4 +1,4 @@
-//https://level.goorm.io/exam/43273/min-%ED%95%A8%EC%88%98/quiz/1
+// Run by Node.js
 
 const readline = require("readline");
 const rl = readline.createInterface({
@@ -7,8 +7,12 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", function(line) {
-	console.log(line);
-	rl.close();
+	let [a, b] = line.split(' ').map(v=>+v);
+	console.log(solution(a, b));
 }).on("close", function() {
 	process.exit();
 });
+
+function solution(a, b) {
+	return Math.min(a, b);
+}
