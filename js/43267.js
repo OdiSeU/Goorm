@@ -7,12 +7,12 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", function(line) {
-	console.log(solution(+line));
+	process.stdout.write(solution(+line));
 	rl.close();
 }).on("close", function() {
 	process.exit();
 });
 
 function solution(n) {
-	return 'Hello Goorm !' + '\nHello Goorm !'.repeat(n-1);
+	return 'Hello Goorm !\n'.repeat(n);
 }
